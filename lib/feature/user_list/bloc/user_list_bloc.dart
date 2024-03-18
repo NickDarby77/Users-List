@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:user_list/consts/app_consts.dart';
-import 'package:user_list/models/user_model.dart';
+import 'package:user_list/feature/user_list/model/user_model.dart';
 import 'package:http/http.dart' as http;
 part 'user_list_event.dart';
 part 'user_list_state.dart';

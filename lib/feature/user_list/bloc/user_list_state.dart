@@ -9,7 +9,4 @@ class UserListState with _$UserListState {
     String? error,
     required bool isLoading,
   }) = _UserListState;
-
-  // factory UserListState.fromJson(Map<String, Object?> json) =>
-  //     _$UserListStateFromJson(json);
 }
