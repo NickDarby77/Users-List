@@ -23,7 +23,9 @@ class UserDetailBloc extends Bloc<UserDetailEvent, UserDetailState> {
     final username = event.username.toLowerCase();
     final response = await http.get(
       Uri.parse('https://api.github.com/users/$username'),
-      headers: {'Authorization': AppConsts.accessToken},
+      headers: {
+        'Authorization': AppConsts.accessToken
+      }, // use here the given github access token
     );
     if (response.statusCode == 200) {
       final userDetail = UserDetailModel.fromJson(

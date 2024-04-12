@@ -29,7 +29,9 @@ class UserListBloc extends Bloc<UserListEvent, UserListState> {
       Uri.parse(
         'https://api.github.com/users?per_page=${state.perPage}&since=${state.since}',
       ),
-      headers: {'Authorization': AppConsts.accessToken},
+      headers: {
+        'Authorization': AppConsts.accessToken
+      }, // use here the given github access token
     );
     if (response.statusCode == 200) {
       final List<dynamic> userList = jsonDecode(response.body);
